@@ -1,4 +1,18 @@
-<!-- From the Basic 024 Property Binding -->
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<!-- From the Basic 024 Property Binding begin -->
+<!-- () uses for events, like [] for propertyes -->
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<!-- From the Basic 024 Property Binding end -->
+
+<!-- From the Basic  025 Property Binding vs String Interpolation begin -->
+<!-- property -->
+<p [innerText]=allowNewServer>test</p>
+
+<!-- string -->
+<p>{{allowNewServer}}</p>
+<!-- From the Basic  025 Property Binding vs String Interpolation end -->
+
+<p>{{serverCreationStatus}}</p>
+
+
 <app-server></app-server>
 <app-server></app-server>
