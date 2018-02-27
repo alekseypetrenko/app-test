@@ -1,3 +1,17 @@
+<!-- Passing and using data with event binding -->
+<!-- <label>Server name</label>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<p>{{serverName}}</p> -->
+
+<!-- two way binding -->
+<label>Server name</label>
+<input 
+    type="text" 
+    class="form-control" 
+    [(ngModel)]="serverName">
+<p>{{serverName}}</p>
+
+
 <!-- From the Basic 024 Property Binding begin -->
 <!-- () uses for events, like [] for propertyes -->
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
